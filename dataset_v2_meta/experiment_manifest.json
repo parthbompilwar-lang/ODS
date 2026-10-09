@@ -1,0 +1,147 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-09-12T12:10:30Z",
+  "description": "Authoritative benchmark and test inventory registry for Law 11 VAR System.",
+  "experiments": [
+    {
+      "experiment_id": "LAW11-UNIT-001",
+      "version": "1.0",
+      "test_count": 7,
+      "scenario_count": 7,
+      "dataset_version": "v2-unit",
+      "date": "2026-09-12",
+      "status": "PASS",
+      "summary": "Core Law 11 rule invariants: defender selection, direction sign, ball-line priority, halfway immunity, level tolerance."
+    },
+    {
+      "experiment_id": "LAW11-STATE-001",
+      "version": "1.0",
+      "test_count": 4,
+      "scenario_count": 4,
+      "dataset_version": "v2-state",
+      "date": "2026-09-12",
+      "status": "PASS",
+      "summary": "State machine transitions across play states: normal play, pass candidate, freeze evidence, resume."
+    },
+    {
+      "experiment_id": "GEOMETRY-DEBUG-002",
+      "version": "1.0",
+      "test_count": 8,
+      "scenario_count": 1,
+      "dataset_version": "v2-calib",
+      "date": "2026-09-12",
+      "status": "PASS",
+      "summary": "Non-circular hold-out validation on 0.jpg (4 fit points, 4 independent test points)."
+    },
+    {
+      "experiment_id": "GEOMETRY-EVAL-001",
+      "version": "1.0",
+      "test_count": 89,
+      "scenario_count": 15,
+      "dataset_version": "v2-geometry",
+      "date": "2026-09-12",
+      "status": "CONDITIONAL_KEEP",
+      "summary": "Cross-scene multi-view pitch homography benchmark across 15 real match scenes (median E_X=0.460m, P95=0.587m)."
+    },
+    {
+      "experiment_id": "LAW11-EVAL-001",
+      "version": "1.0",
+      "test_count": 25,
+      "scenario_count": 25,
+      "dataset_version": "v2-benchmark",
+      "date": "2026-09-12",
+      "status": "PASS",
+      "summary": "25-scenario diagnostic Law 11 evaluation benchmark covering clearly onside/offside, marginal, ball-line, halfway immunity."
+    },
+    {
+      "experiment_id": "END-TO-END-EVAL-001",
+      "version": "1.0",
+      "test_count": 25,
+      "scenario_count": 25,
+      "dataset_version": "v2-e2e",
+      "date": "2026-09-12",
+      "status": "WITHDRAWN / SUPERSEDED",
+      "summary": "Superseded by END-TO-END-EVAL-002. Evaluated pipeline causal attribution on 25 events, but used a shadow policy calculation rather than true snapshot propagation."
+    },
+    {
+      "experiment_id": "TEAM-EVAL-001",
+      "version": "1.0",
+      "test_count": 15,
+      "scenario_count": 15,
+      "dataset_version": "v2-team",
+      "date": "2026-09-12",
+      "status": "CONDITIONAL_KEEP*",
+      "summary": "Multi-scene color separability (mean Lab dist=101.15, silhouette=0.751) and 100% referee & GK isolation. Validates clustering separability; absolute team accuracy pending annotated ground-truth rosters."
+    },
+    {
+      "experiment_id": "UI-SMOKE-001",
+      "version": "1.0",
+      "test_count": 5,
+      "scenario_count": 5,
+      "dataset_version": "v2-ui",
+      "date": "2026-09-12",
+      "status": "PASS",
+      "summary": "Smoke testing for Streamlit app: video loading, single-frame incident analysis, pitch-clipped shading, invalid calibration state, decision semantics."
+    },
+    {
+      "experiment_id": "RUNTIME-PERF-001",
+      "version": "1.0",
+      "test_count": 241,
+      "scenario_count": 1,
+      "dataset_version": "v2-video-241",
+      "date": "2026-09-12",
+      "status": "KEEP",
+      "summary": "Runtime performance, latency, track persistence, and temporal sync benchmark on 241-frame broadcast match footage (1280x720 @ 30 FPS). Effective FPS: 25.93 FPS (mean latency 34.18ms, P50 28.16ms, P95 33.79ms). Causal chain sync verified at contact moment t*."
+    },
+    {
+      "experiment_id": "RUNTIME-LAG-002",
+      "version": "1.0",
+      "test_count": 241,
+      "scenario_count": 1,
+      "dataset_version": "v2-spurs-1080p",
+      "date": "2026-09-12",
+      "status": "CONDITIONAL_KEEP",
+      "summary": "Pipeline lag, coordinate boundary invariant, and temporal stability diagnostic on 241-frame 1080p match footage. Resolved x=1537 mystery (source is 1920x1080, 0 OOB violations). Zero contact evaluated from predicted/lost ball. Confirmed YOLO recall (81.9% of non-observed frames) and TeamClassifier latency (31.3%) as primary bottlenecks."
+    },
+    {
+      "experiment_id": "END-TO-END-EVAL-002",
+      "version": "2.0",
+      "test_count": 25,
+      "scenario_count": 25,
+      "dataset_version": "v2-e2e",
+      "date": "2026-09-12",
+      "status": "KEEP",
+      "summary": "Full pipeline causal attribution across 25 diagnostic events with wired-up boundary_status propagation through EvidenceSnapshot. Geometric Decision Acc: 24/25 (96.0%), Policy Acc: 25/25 (100.0%), Signed Margin MAE: 0.143m. Review Split: 17 Decisive, 4 Marginal, 4 Undetermined. Zero-failure traversal: 22/25 (88.0%)."
+    },
+    {
+      "experiment_id": "BALL-RECALL-001",
+      "version": "1.0",
+      "test_count": 241,
+      "scenario_count": 3,
+      "dataset_version": "v2-spurs-1080p",
+      "date": "2026-09-12",
+      "status": "KEEP",
+      "summary": "Comparative benchmark of 3 ball perception architectures (Baseline vs. ROI-Only vs. Hybrid Recovery). Variant C Hybrid achieved 70.1% raw detection (+9.5% over baseline) and 61.8% observed coverage (+9.9% over baseline, 24 fewer dropout frames), with 100% contact coverage."
+    },
+    {
+      "experiment_id": "TEAM-PERF-001",
+      "version": "1.0",
+      "test_count": 241,
+      "scenario_count": 4,
+      "dataset_version": "v2-spurs-1080p",
+      "date": "2026-09-12",
+      "status": "KEEP",
+      "summary": "Compute optimization and stability benchmark across 4 TeamClassifier variants (A Baseline, B Fast, C Cached, D Fast+Cached). Winning Variant D achieved 0.62ms mean latency (20.03x speedup vs 12.42ms baseline), crushed tail from 75.25ms to 3.43ms max, reduced KMeans calls by 71.3%, maintained 100% Law 11 decision invariance, and established canonical luminance cluster anchoring."
+    },
+    {
+      "experiment_id": "GEOMETRY-CAMERA-001",
+      "version": "1.0",
+      "test_count": 241,
+      "scenario_count": 3,
+      "dataset_version": "v2-spurs-1080p",
+      "date": "2026-09-13",
+      "status": "CONDITIONAL_KEEP",
+      "summary": "Dynamic homography benchmark under camera motion comparing Static H0 (A), Raw LK on pitch markings (B), and Guarded Hybrid LK with fallback (C). Static A failed under pan (37.55m drift). Raw LK B tracked pan (0.88m drift) but suffered catastrophic condition number explosion (kappa(H) grew 47x to 155,335). Guarded Hybrid C successfully intercepted 9 collinearity collapses and 31 condition explosions, maintaining projective convexity. Recommended policy: Conditional use of Variant C gated by motion classification."
+    }
+  ]
+}

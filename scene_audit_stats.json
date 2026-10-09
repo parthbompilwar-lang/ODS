@@ -1,0 +1,12 @@
+{
+  "sampled_frames": 60,
+  "goal_mouth_percentage": 88.33333333333333,
+  "midfield_percentage": 11.666666666666666,
+  "balls_detected_in_sample": 11,
+  "ball_mean_width_px": 47.08470569957387,
+  "ball_min_width_px": 18.9407958984375,
+  "ball_max_width_px": 115.248291015625,
+  "ball_mean_area_px2": 1972.8330743963068,
+  "tiny_ball_pct_under_20px": 9.090909090909092,
+  "unique_broadcast_signatures": 350
+}

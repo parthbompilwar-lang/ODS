@@ -1,0 +1,15 @@
+# FIFA Law 11 Offside Detection System (ODS) Dependencies
+ultralytics>=8.3.0
+torch>=2.4.0
+torchvision>=0.19.0
+streamlit>=1.39.0
+opencv-python>=4.10.0
+scikit-learn>=1.5.0
+scipy>=1.14.0
+numpy>=1.26.0
+pandas>=2.2.0
+imageio>=2.36.0
+imageio-ffmpeg>=0.5.0
+matplotlib>=3.9.0
+Pillow>=10.4.0
+PyYAML>=6.0

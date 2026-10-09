@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+__MACOSX/
+
+# YOLO Dataset Caches
+*.cache
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large Archives (> 100MB)
+*.zip
+*.tar.gz
+*.rar
+Offside_detection_dataset.zip
+
+# Training Run Outputs & TensorBoard Logs
+runs/
+
+# Temporary video outputs from testing & debugging
+test_out.mp4
+test_spurs_var_out*.mp4
+test_uploaded_match_241.mp4
+output_var_match.mp4
+var_output_test.mp4
+
+# Temporary debug images & crops
+crop_*.jpg
+debug_frame_*.jpg
+scratch/
+scratch_*.py
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.system_generated/
+.pytest_cache/
+.streamlit/
+
+# Embedded reference repos
+repo_ref/

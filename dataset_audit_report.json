@@ -1,0 +1,161 @@
+{
+  "file_inventory": {
+    "total_files_in_folder": 483,
+    "image_files_on_disk": 482,
+    "non_image_files": [
+      ".DS_Store"
+    ],
+    "json_entries": 482,
+    "json_images_matching_disk": 482,
+    "images_on_disk_not_in_json": [],
+    "json_entries_not_on_disk": []
+  },
+  "annotations": {
+    "valid_pose_dict_entries": 452,
+    "skip_entries": 30,
+    "skip_image_ids": [
+      "69.jpg",
+      "73.jpg",
+      "77.jpg",
+      "81.jpg",
+      "104.jpg",
+      "116.jpg",
+      "146.jpg",
+      "151.jpg",
+      "165.jpg",
+      "166.jpg",
+      "201.jpg",
+      "202.jpg",
+      "205.jpg",
+      "206.jpg",
+      "207.jpg",
+      "209.jpg",
+      "275.jpg",
+      "280.jpg",
+      "281.jpg",
+      "284.jpg",
+      "285.jpg",
+      "287.jpg",
+      "288.jpg",
+      "289.jpg",
+      "291.jpg",
+      "292.jpg",
+      "293.jpg",
+      "295.jpg",
+      "296.jpg",
+      "297.jpg"
+    ],
+    "other_entries": 0,
+    "annotated_dictionary_keys": [
+      "Team2",
+      "Team1",
+      "GK"
+    ],
+    "instances": {
+      "Team1_player_instances": 2740,
+      "Team2_player_instances": 2972,
+      "total_outfield_player_instances": 5712,
+      "goalkeeper_instances": 404,
+      "referee_instances": 0,
+      "ball_instances": 0,
+      "total_instances": 6116
+    },
+    "images_containing_class": {
+      "Team1_images": 452,
+      "Team2_images": 452,
+      "goalkeeper_images": 404,
+      "referee_images": 0,
+      "ball_images": 0
+    },
+    "keypoints_distribution": {
+      "9": 6027,
+      "8": 88,
+      "10": 1
+    }
+  },
+  "image_properties": {
+    "corrupted_images": [],
+    "resolutions": {
+      "2560x1440": 53,
+      "1920x1080": 407,
+      "1920x1012": 22
+    },
+    "players_per_image": {
+      "min": 5,
+      "max": 20,
+      "mean": 13.530973451327434,
+      "median": 13.0
+    },
+    "bounding_boxes_px": {
+      "width_mean": 39.78008502289078,
+      "width_min": 7.0,
+      "width_max": 133.0,
+      "height_mean": 102.95797907128842,
+      "height_min": 14.0,
+      "height_max": 429.0
+    }
+  },
+  "leakage_and_sequences": {
+    "estimated_video_clips_sequences": 478,
+    "sequence_lengths_sample": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "near_duplicate_sequential_pairs_count": 9,
+    "sample_near_duplicates": [
+      [
+        "45.jpg",
+        "63.jpg",
+        3
+      ],
+      [
+        "105.jpg",
+        "120.jpg",
+        0
+      ],
+      [
+        "106.jpg",
+        "121.jpg",
+        0
+      ],
+      [
+        "311.jpg",
+        "327.jpg",
+        2
+      ],
+      [
+        "329.jpg",
+        "344.jpg",
+        1
+      ],
+      [
+        "331.jpg",
+        "346.jpg",
+        2
+      ],
+      [
+        "332.jpg",
+        "336.jpg",
+        1
+      ],
+      [
+        "332.jpg",
+        "347.jpg",
+        1
+      ],
+      [
+        "336.jpg",
+        "347.jpg",
+        2
+      ]
+    ]
+  }
+}

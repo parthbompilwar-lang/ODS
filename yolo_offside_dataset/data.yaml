@@ -1,0 +1,9 @@
+path: E:\ODS\yolo_offside_dataset
+train: images/train
+val: images/val
+
+names:
+  0: Not_Offside
+  1: Offside
+  2: Goalkeeper
+  3: Ball

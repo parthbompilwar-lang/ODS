@@ -1,0 +1,178 @@
+{
+  "benchmark_id": "TEAM-EVAL-001",
+  "status": "CONDITIONAL_KEEP",
+  "num_scenes_tested": 15,
+  "mean_centroid_distance_lab": 120.18,
+  "mean_silhouette_score": 0.0,
+  "referee_isolation_accuracy_pct": 100.0,
+  "goalkeeper_isolation_accuracy_pct": 100.0,
+  "temporal_track_checks": 10,
+  "temporal_majority_flip_rate_pct": 30.0,
+  "scene_details": [
+    {
+      "scene": "0.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 160.25,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 13,
+      "gk_count": 1,
+      "ref_count": 3
+    },
+    {
+      "scene": "1.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 161.08,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 14,
+      "gk_count": 1,
+      "ref_count": 6
+    },
+    {
+      "scene": "10.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 162.51,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 17,
+      "gk_count": 1,
+      "ref_count": 4
+    },
+    {
+      "scene": "104.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 94.52,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 19,
+      "gk_count": 1,
+      "ref_count": 2
+    },
+    {
+      "scene": "114.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 139.36,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 15,
+      "gk_count": 1,
+      "ref_count": 0
+    },
+    {
+      "scene": "126.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 100.17,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 16,
+      "gk_count": 1,
+      "ref_count": 0
+    },
+    {
+      "scene": "136.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 161.21,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 20,
+      "gk_count": 1,
+      "ref_count": 1
+    },
+    {
+      "scene": "146.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 107.2,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 22,
+      "gk_count": 1,
+      "ref_count": 0
+    },
+    {
+      "scene": "156.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 137.24,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 11,
+      "gk_count": 3,
+      "ref_count": 0
+    },
+    {
+      "scene": "166.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 114.88,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 17,
+      "gk_count": 2,
+      "ref_count": 1
+    },
+    {
+      "scene": "176.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 46.47,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 13,
+      "gk_count": 2,
+      "ref_count": 1
+    },
+    {
+      "scene": "189.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 93.82,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 12,
+      "gk_count": 1,
+      "ref_count": 0
+    },
+    {
+      "scene": "214.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 153.69,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 18,
+      "gk_count": 1,
+      "ref_count": 1
+    },
+    {
+      "scene": "225.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 116.09,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 14,
+      "gk_count": 2,
+      "ref_count": 0
+    },
+    {
+      "scene": "237.jpg",
+      "fit_ok": true,
+      "centroid_distance_lab": 54.14,
+      "silhouette_score": 0.0,
+      "team_0_count": 0,
+      "team_1_count": 0,
+      "unknown_count": 7,
+      "gk_count": 1,
+      "ref_count": 1
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "benchmark_id": "GEOMETRY-CAMERA-001",
+  "total_frames_evaluated": 241,
+  "reference_15_scenes_ex_median_m": 0.46,
+  "reference_15_scenes_ex_p95_m": 2.386,
+  "stratified_motion": {
+    "STATIC": {
+      "count": 98,
+      "pct": 40.7,
+      "mean_drift_a_m": 21.557,
+      "mean_drift_b_m": 0.486,
+      "mean_drift_c_m": 2.262,
+      "reproj_c_px": 0.04
+    },
+    "LOW_MOTION": {
+      "count": 5,
+      "pct": 2.1,
+      "mean_drift_a_m": 0.742,
+      "mean_drift_b_m": 0.095,
+      "mean_drift_c_m": 0.089,
+      "reproj_c_px": 0.18
+    },
+    "PAN": {
+      "count": 130,
+      "pct": 53.9,
+      "mean_drift_a_m": 37.546,
+      "mean_drift_b_m": 0.878,
+      "mean_drift_c_m": 4.308,
+      "reproj_c_px": 0.19
+    },
+    "PAN_ZOOM": {
+      "count": 8,
+      "pct": 3.3,
+      "mean_drift_a_m": 63.478,
+      "mean_drift_b_m": 1.19,
+      "mean_drift_c_m": 10.583,
+      "reproj_c_px": 0.27
+    }
+  },
+  "overall_drift_a_m": 31.141,
+  "overall_drift_b_m": 0.713,
+  "overall_drift_c_m": 3.597,
+  "recalibration_count": 40,
+  "offside_decision_agreement_ac_pct": 100.0,
+  "offside_decision_agreement_ab_pct": 100.0,
+  "mean_latency_c_ms": 52.59
+}

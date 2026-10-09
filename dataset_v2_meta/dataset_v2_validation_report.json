@@ -1,0 +1,79 @@
+{
+  "passes": [
+    "train: Every image has a corresponding label file (323 pairs)",
+    "val: Every image has a corresponding label file (69 pairs)",
+    "test: Every image has a corresponding label file (69 pairs)",
+    "All label lines have exactly 5 valid fields",
+    "No zero-area boxes found",
+    "MD5 duplicates across all splits = 0",
+    "No image appears in more than one split",
+    "All images match their Step 1 split assignments (no group leakage)",
+    "Test set contains 69 images (LOCKED)"
+  ],
+  "warnings": [],
+  "errors": [],
+  "class_distribution": {
+    "train": {
+      "Player": {
+        "instances": 3790,
+        "images": 302
+      },
+      "Goalkeeper": {
+        "instances": 271,
+        "images": 271
+      },
+      "Referee": {
+        "instances": 235,
+        "images": 235
+      },
+      "Ball": {
+        "instances": 298,
+        "images": 298
+      }
+    },
+    "val": {
+      "Player": {
+        "instances": 840,
+        "images": 65
+      },
+      "Goalkeeper": {
+        "instances": 60,
+        "images": 60
+      },
+      "Referee": {
+        "instances": 50,
+        "images": 50
+      },
+      "Ball": {
+        "instances": 63,
+        "images": 63
+      }
+    },
+    "test": {
+      "Player": {
+        "instances": 804,
+        "images": 64
+      },
+      "Goalkeeper": {
+        "instances": 54,
+        "images": 54
+      },
+      "Referee": {
+        "instances": 55,
+        "images": 55
+      },
+      "Ball": {
+        "instances": 66,
+        "images": 66
+      }
+    }
+  },
+  "ball_width_distribution": {
+    "lt_8px": 2,
+    "8_16px": 235,
+    "16_32px": 186,
+    "32_64px": 4,
+    "gt_64px": 0
+  },
+  "verdict": "PASSED"
+}

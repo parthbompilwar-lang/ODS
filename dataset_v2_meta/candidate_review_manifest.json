@@ -1,0 +1,38 @@
+{
+  "dataset": "ODS Dataset V2 - DATASET-V2-BUILD-002",
+  "ball_summary": {
+    "images_reviewed": 458,
+    "candidate_boxes": 2435,
+    "accepted": 427,
+    "rejected": 721,
+    "uncertain": 1287,
+    "visibility": {
+      "clear": 314,
+      "partial": 91,
+      "blurred": 22
+    },
+    "hard_cases": {
+      "tiny_ball": 368,
+      "ball_near_foot": 235,
+      "ball_occluded": 8,
+      "ball_motion_blur": 22
+    }
+  },
+  "referee_summary": {
+    "images_reviewed": 342,
+    "candidate_boxes": 1551,
+    "accepted": 720,
+    "rejected": 138,
+    "uncertain": 693,
+    "hard_cases": {
+      "referee_near_defender": 97,
+      "referee_overlapping_player": 49,
+      "referee_goal_area": 47
+    }
+  },
+  "annotation_quality": {
+    "duplicate_candidates": 213,
+    "invalid_boxes": 0,
+    "unresolved_cases": 1980
+  }
+}

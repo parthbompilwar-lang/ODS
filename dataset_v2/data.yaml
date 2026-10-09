@@ -1,0 +1,11 @@
+path: e:\ODS\dataset_v2
+train: images/train
+val: images/val
+test: images/test
+
+nc: 4
+names:
+  0: Player
+  1: Goalkeeper
+  2: Referee
+  3: Ball

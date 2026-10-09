@@ -1,0 +1,98 @@
+{
+  "benchmark": "LAW11-EVAL-001",
+  "geometric_accuracy_at_t_gt": {
+    "total_cases_evaluated": 4,
+    "decision_accuracy_pct": 100.0,
+    "mean_signed_margin_error_meters": 0.42,
+    "defender_selection_accuracy_pct": 100.0
+  },
+  "contact_timing_impact_at_t_hat": {
+    "decision_accuracy_pct": 100.0,
+    "mean_signed_margin_error_meters": 0.42,
+    "additional_error_from_contact_timing_meters": 0.0
+  },
+  "architectural_invariant_verification": {
+    "test_description": "NO VALID HOMOGRAPHY -> NO METRIC DECISION",
+    "invariant_tests_passed": "1/1 (100.0%)",
+    "fake_metric_coordinates_prevented": true
+  },
+  "error_decomposition": {
+    "perception_error_mAP50": "0.913 Player / 0.896 GK / 0.565 Ball",
+    "tracking_identity_continuity": "Temporally coherent within action window",
+    "contact_timing_error_ms": "13.3 ms MAE (0.20 frames @ 15 FPS)",
+    "geometry_margin_error_m": "0.420 meters",
+    "additional_timing_margin_delta_m": "0.000 meters",
+    "law11_reasoning_error": "0.0% (Deterministic state machine logic)"
+  },
+  "per_case_benchmark_results": [
+    {
+      "case_id": "LAW11_CASE_01_CLEAR_OFFSIDE",
+      "description": "Clear through-ball pass: attacker 1.45m ahead of second-last defender",
+      "gt_decision": "OFFSIDE",
+      "pred_decision_at_t_gt": "OFFSIDE",
+      "pred_decision_at_t_hat": "OFFSIDE",
+      "gt_margin_m": 1.45,
+      "pred_margin_at_t_gt_m": 2.06,
+      "pred_margin_at_t_hat_m": 2.06,
+      "margin_error_at_t_gt_m": 0.61,
+      "margin_error_at_t_hat_m": 0.61,
+      "contact_timing_delta_m": 0.0,
+      "defender_selection_correct": true,
+      "calibration_status": "CALIBRATED_HOMOGRAPHY"
+    },
+    {
+      "case_id": "LAW11_CASE_02_CLEAR_ONSIDE",
+      "description": "Attacker well behind defensive line (-2.10m onside)",
+      "gt_decision": "ONSIDE",
+      "pred_decision_at_t_gt": "ONSIDE",
+      "pred_decision_at_t_hat": "ONSIDE",
+      "gt_margin_m": 0.0,
+      "pred_margin_at_t_gt_m": 0.0,
+      "pred_margin_at_t_hat_m": 0.0,
+      "margin_error_at_t_gt_m": 0.0,
+      "margin_error_at_t_hat_m": 0.0,
+      "contact_timing_delta_m": 0.0,
+      "defender_selection_correct": true,
+      "calibration_status": "CALIBRATED_HOMOGRAPHY"
+    },
+    {
+      "case_id": "LAW11_CASE_03_BALL_LINE_PRIORITY",
+      "description": "Cutback pass: Ball is ahead of second-last defender, defining the offside line",
+      "gt_decision": "OFFSIDE",
+      "pred_decision_at_t_gt": "OFFSIDE",
+      "pred_decision_at_t_hat": "OFFSIDE",
+      "gt_margin_m": 1.25,
+      "pred_margin_at_t_gt_m": 2.05,
+      "pred_margin_at_t_hat_m": 2.05,
+      "margin_error_at_t_gt_m": 0.8,
+      "margin_error_at_t_hat_m": 0.8,
+      "contact_timing_delta_m": 0.0,
+      "defender_selection_correct": true,
+      "calibration_status": "CALIBRATED_HOMOGRAPHY"
+    },
+    {
+      "case_id": "LAW11_CASE_04_TIGHT_MARGIN",
+      "description": "Tight margin (+0.28m offside near the limit of human eye)",
+      "gt_decision": "OFFSIDE",
+      "pred_decision_at_t_gt": "OFFSIDE",
+      "pred_decision_at_t_hat": "OFFSIDE",
+      "gt_margin_m": 0.28,
+      "pred_margin_at_t_gt_m": 0.55,
+      "pred_margin_at_t_hat_m": 0.55,
+      "margin_error_at_t_gt_m": 0.27,
+      "margin_error_at_t_hat_m": 0.27,
+      "contact_timing_delta_m": 0.0,
+      "defender_selection_correct": true,
+      "calibration_status": "CALIBRATED_HOMOGRAPHY"
+    },
+    {
+      "case_id": "LAW11_CASE_05_NO_HOMOGRAPHY_INVARIANT",
+      "description": "Missing homography calibration: must refuse fake metric decision",
+      "homography_valid": false,
+      "calibration_status": "UNCALIBRATED_PIXEL_ONLY",
+      "margin_unit": "px",
+      "invariant_respected": true,
+      "explanation": "OFFSIDE: Attacker is +40.0px beyond defensive baseline (UNCALIBRATED: Metric distance requires pitch homography)."
+    }
+  ]
+}

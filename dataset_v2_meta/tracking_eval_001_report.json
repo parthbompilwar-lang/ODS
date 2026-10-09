@@ -1,0 +1,67 @@
+{
+  "experiment": "TRACKING-EVAL-001",
+  "evaluation_criteria": {
+    "track_001_player": "Identity continuity, lifespan, MT/ML breakdown",
+    "track_002_ball": "Coverage, strict OBSERVED vs PREDICTED distinction, temporal gap recovery"
+  },
+  "continuous_bursts_benchmark": {
+    "total_frames": 21,
+    "player_metrics": {
+      "total_detections": 281,
+      "total_tracks": 226,
+      "avg_track_length": 1.62,
+      "mostly_tracked": 132,
+      "partially_tracked": 0,
+      "mostly_lost": 94
+    },
+    "ball_metrics": {
+      "raw_detection_frames": 18,
+      "raw_coverage_pct": 85.7,
+      "tracked_coverage_pct": 85.7,
+      "state_counts": {
+        "observed": 12,
+        "predicted": 6,
+        "lost": 3
+      },
+      "gaps_bridged": {
+        "1_frame": 0,
+        "2_frame": 0,
+        "3_frame": 0,
+        "4_frame": 0,
+        "5plus_frame": 0,
+        "total": 0,
+        "max_consecutive_missing_bridged": 0
+      }
+    }
+  },
+  "video_sequence_benchmark": {
+    "total_frames": 60,
+    "player_metrics": {
+      "total_detections": 943,
+      "total_tracks": 511,
+      "avg_track_length": 3.28,
+      "mostly_tracked": 0,
+      "partially_tracked": 3,
+      "mostly_lost": 508
+    },
+    "ball_metrics": {
+      "raw_detection_frames": 46,
+      "raw_coverage_pct": 76.7,
+      "tracked_coverage_pct": 90.0,
+      "state_counts": {
+        "observed": 8,
+        "predicted": 46,
+        "lost": 6
+      },
+      "gaps_bridged": {
+        "1_frame": 0,
+        "2_frame": 0,
+        "3_frame": 0,
+        "4_frame": 0,
+        "5plus_frame": 2,
+        "total": 2,
+        "max_consecutive_missing_bridged": 6
+      }
+    }
+  }
+}

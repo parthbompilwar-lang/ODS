@@ -1,0 +1,104 @@
+{
+  "experiment_name": "TRAIN-001 / DETECTOR-EVAL-001",
+  "training_configuration": {
+    "model_base": "yolo11n.pt",
+    "imgsz": 1280,
+    "epochs": 25,
+    "batch": 8,
+    "seed": 42,
+    "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "dataset": "dataset_v2/data.yaml (323 train, 69 val, 69 locked test)",
+    "training_time_seconds": 704.5
+  },
+  "best_weights": "E:\\ODS\\models\\yolo11_v2_4class_best.pt",
+  "validation_metrics": {
+    "overall": {
+      "precision": 0.7742,
+      "recall": 0.7179,
+      "mAP50": 0.748,
+      "mAP50_95": 0.5173
+    },
+    "per_class": {
+      "Player": {
+        "precision": 0.9034,
+        "recall": 0.969,
+        "mAP50": 0.9307,
+        "mAP50_95": 0.6584
+      },
+      "Goalkeeper": {
+        "precision": 0.9179,
+        "recall": 0.9312,
+        "mAP50": 0.941,
+        "mAP50_95": 0.6829
+      },
+      "Referee": {
+        "precision": 0.4289,
+        "recall": 0.4,
+        "mAP50": 0.4169,
+        "mAP50_95": 0.2974
+      },
+      "Ball": {
+        "precision": 0.8465,
+        "recall": 0.5714,
+        "mAP50": 0.7037,
+        "mAP50_95": 0.4305
+      }
+    }
+  },
+  "locked_test_metrics": {
+    "overall": {
+      "precision": 0.703,
+      "recall": 0.6668,
+      "mAP50": 0.6409,
+      "mAP50_95": 0.4464
+    },
+    "per_class": {
+      "Player": {
+        "precision": 0.8816,
+        "recall": 0.9714,
+        "mAP50": 0.9133,
+        "mAP50_95": 0.6482
+      },
+      "Goalkeeper": {
+        "precision": 0.8487,
+        "recall": 0.9353,
+        "mAP50": 0.8958,
+        "mAP50_95": 0.657
+      },
+      "Referee": {
+        "precision": 0.305,
+        "recall": 0.2909,
+        "mAP50": 0.1895,
+        "mAP50_95": 0.1214
+      },
+      "Ball": {
+        "precision": 0.7767,
+        "recall": 0.4697,
+        "mAP50": 0.5652,
+        "mAP50_95": 0.3589
+      }
+    }
+  },
+  "small_ball_breakdown": {
+    "lt_8px": {
+      "total": 0,
+      "detected": 0,
+      "recall_pct": 0.0
+    },
+    "8_16px": {
+      "total": 36,
+      "detected": 19,
+      "recall_pct": 52.8
+    },
+    "16_32px": {
+      "total": 30,
+      "detected": 16,
+      "recall_pct": 53.3
+    },
+    "32_64px": {
+      "total": 0,
+      "detected": 0,
+      "recall_pct": 0.0
+    }
+  }
+}

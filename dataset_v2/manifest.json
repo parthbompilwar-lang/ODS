@@ -1,0 +1,7839 @@
+[
+  {
+    "image_id": "0.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 12,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "1.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 10,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "2.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 26,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "3.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 35,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "4.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 49,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "5.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 63,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "6.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 79,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "7.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 97,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "8.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 112,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "9.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 24,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "10.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 127,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "11.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 141,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "12.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 155,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "13.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 165,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "14.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 17,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "15.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 38,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "16.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 177,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "17.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 193,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "18.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 203,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "19.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 214,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "20.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 227,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "21.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 27,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "22.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 39,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "23.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 236,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "24.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 252,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "25.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 258,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "26.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 271,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "27.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 286,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "28.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 52,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "29.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 299,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "30.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 310,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "31.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 318,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "32.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 335,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "33.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 61,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "34.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 346,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "35.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 55,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "36.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 363,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "37.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 380,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "38.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 397,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "39.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 414,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "40.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 429,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "41.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 78,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "42.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 439,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "43.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 447,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "44.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 88,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "45.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 466,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "46.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 483,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "47.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 500,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "48.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 514,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "49.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 100,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "50.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 67,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "51.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 116,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "52.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 85,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "53.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 523,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "54.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 102,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "55.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 127,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "56.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 117,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "57.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 539,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "58.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 549,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "59.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 564,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "60.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 132,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "61.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 582,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "62.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 592,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "63.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 146,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "64.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 153,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "65.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 598,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "66.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 167,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "67.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 611,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "68.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 623,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "69.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 623,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "70.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 633,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "71.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 646,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "72.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 661,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "73.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 132,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "74.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 673,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "75.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 687,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "76.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 699,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "77.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 699,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "78.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 709,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "79.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 723,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "80.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 734,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "81.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 734,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "82.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 176,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "83.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 742,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "84.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 750,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "85.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 757,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "86.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 772,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "87.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 784,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "88.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 796,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "89.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 805,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "90.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 137,
+    "counts": {
+      "player": 5,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "91.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 143,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "92.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 812,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "93.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 825,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "94.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 838,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "95.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 156,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "96.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 852,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "97.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 856,
+    "counts": {
+      "player": 4,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "98.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 865,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "99.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 874,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "100.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 886,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "101.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 902,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "102.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 194,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "103.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 170,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "104.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 194,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "105.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 915,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "106.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 924,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "107.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 930,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "108.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 945,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "109.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 208,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "110.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 188,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "111.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 958,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "112.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 970,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "113.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 977,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "114.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 992,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "115.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1006,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "116.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1006,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "117.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1019,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "118.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1026,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "119.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1036,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "122.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1053,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "123.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1070,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "124.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1081,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "125.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1099,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "126.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1110,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "127.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 207,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "128.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1127,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "129.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1142,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "130.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1156,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "131.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1171,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "132.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1187,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "133.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1201,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "134.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 218,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "135.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1220,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "136.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 225,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "137.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1236,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "138.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1254,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "139.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1264,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "140.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 233,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "141.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 237,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "142.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1280,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "143.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1292,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "144.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 254,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "145.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1303,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "146.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1303,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "147.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1313,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "148.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1323,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "149.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1335,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "150.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1351,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "151.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1351,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "152.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1363,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "156.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1373,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "157.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1387,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "158.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 245,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "159.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1399,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "160.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 251,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "161.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1408,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "162.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1417,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "163.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1424,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "164.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1438,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "165.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 254,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "166.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1438,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "167.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1448,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "168.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1452,
+    "counts": {
+      "player": 4,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "169.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 260,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "170.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 263,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "171.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 276,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "172.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1470,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "173.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1487,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "174.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1501,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "175.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 275,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "176.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1511,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "177.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1528,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "178.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 287,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "179.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1544,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "180.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 290,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "181.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1557,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "182.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1570,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "183.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 302,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "184.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1588,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "185.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1601,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "186.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1613,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "187.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1626,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "188.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1639,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "189.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1651,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "190.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1660,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "191.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1666,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "192.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1681,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "193.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1695,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "194.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1708,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "195.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1721,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "196.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 313,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "198.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 320,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "199.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 331,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "200.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 304,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "201.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 331,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "202.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1721,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "203.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1728,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "204.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1738,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "205.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1738,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "206.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1738,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "207.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1738,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "208.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1750,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "209.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1750,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "210.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 315,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "211.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 326,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "212.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1766,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "213.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1782,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "214.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1798,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "215.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 348,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "216.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1814,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "217.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 336,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "218.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1822,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "219.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1839,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "220.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1855,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "221.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1864,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "222.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 353,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "223.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 370,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "224.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 365,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "225.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 381,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "226.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 397,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "227.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 409,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "228.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1877,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "229.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1889,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "230.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1906,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "231.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1925,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "232.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1935,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "233.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1949,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "234.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1959,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "235.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1973,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "236.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 415,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "237.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1980,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "239.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 1992,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "240.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2009,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "241.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 425,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "242.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2021,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "243.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2036,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "244.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2047,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "245.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2066,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "246.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 375,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "247.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 440,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "248.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2078,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "249.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2090,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "250.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2108,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "251.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2116,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "252.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 384,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "253.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2130,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "254.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 397,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "255.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2144,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "256.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2158,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "257.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2162,
+    "counts": {
+      "player": 4,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "258.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2172,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "259.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2181,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "260.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2193,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "261.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2209,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "262.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 458,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "263.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 411,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "264.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2224,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "265.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2233,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "266.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2249,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "267.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2260,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "268.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 423,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "269.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2271,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "270.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2282,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "271.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 464,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "272.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 475,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "273.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2295,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "274.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2308,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "275.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 423,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "276.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 433,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "277.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 446,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "278.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2322,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "279.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "280.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 475,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "281.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "282.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 485,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "283.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 456,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "284.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "285.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "286.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 466,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "287.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 466,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "288.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "289.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "290.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 476,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "291.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 476,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "292.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "293.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "294.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 495,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "295.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 495,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "296.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "297.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2332,
+    "counts": {
+      "player": 0,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "298.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2346,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "299.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2363,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "300.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2374,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "301.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2386,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "302.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2392,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "303.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2404,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "304.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 508,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "305.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2415,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "306.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2424,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "307.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2430,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "308.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2436,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "309.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 519,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "310.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 529,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "311.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 539,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "312.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 485,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "313.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2442,
+    "counts": {
+      "player": 6,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "314.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 549,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "316.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 563,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "317.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 574,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "318.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2455,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "319.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2469,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "320.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2479,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "321.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2492,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "322.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 584,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "323.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 594,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "324.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2511,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "325.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2525,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "326.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 608,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "327.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2535,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "328.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2545,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "329.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2555,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "330.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2571,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "331.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2580,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "332.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 503,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "333.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2591,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "334.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 518,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "335.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 528,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "336.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 627,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "337.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2600,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "338.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2614,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "339.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2624,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "340.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2634,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "341.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 532,
+    "counts": {
+      "player": 4,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "342.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2648,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "343.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 546,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "344.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2658,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "345.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2674,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "346.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2684,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "347.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2703,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "348.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 556,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "349.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2715,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "351.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2728,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "352.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2739,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "353.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2750,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "355.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2761,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "356.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2770,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "358.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 638,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "359.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2775,
+    "counts": {
+      "player": 5,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "360.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 568,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "361.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2789,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "362.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 583,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "364.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2806,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "365.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2818,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "366.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 2828,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "367.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2847,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "368.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2859,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "369.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2874,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "370.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 654,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "371.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 671,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "372.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 600,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "373.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2885,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "374.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2895,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "375.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2905,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "376.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 609,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "377.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 616,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "378.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 625,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "379.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 641,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "381.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2916,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "382.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2928,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "383.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 653,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "385.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2938,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "386.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 687,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "387.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2952,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "389.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2964,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "390.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2973,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "391.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 702,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "393.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 2986,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "394.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 2994,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "395.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3005,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "396.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3012,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "397.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 665,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "399.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3024,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "400.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3037,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "401.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3047,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "402.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 683,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "404.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3054,
+    "counts": {
+      "player": 7,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "405.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3069,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "406.jpg",
+    "split": "test",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 693,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "407.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3086,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "408.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 716,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "409.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3101,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "410.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 732,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "411.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3118,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "412.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 709,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "413.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 718,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "414.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 3134,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "415.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3146,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "416.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 745,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "417.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 756,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "418.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3157,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "419.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3170,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "420.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3183,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "421.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3201,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "423.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3210,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "425.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3221,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "426.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3231,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "427.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3245,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "429.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3253,
+    "counts": {
+      "player": 8,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": false
+  },
+  {
+    "image_id": "430.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 735,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "431.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 771,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "433.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3271,
+    "counts": {
+      "player": 18,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "434.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3282,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "435.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3298,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "437.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3309,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "438.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3322,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "439.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3334,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "441.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3343,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "442.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3358,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "443.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 787,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "444.jpg",
+    "split": "val",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 797,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "445.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 816,
+    "counts": {
+      "player": 19,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "446.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3370,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "447.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3383,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "448.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 3400,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 0
+    },
+    "has_ball": false,
+    "has_referee": true
+  },
+  {
+    "image_id": "449.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3417,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "450.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3422,
+    "counts": {
+      "player": 5,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "451.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3434,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "452.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 3450,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "453.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3465,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "454.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3480,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "455.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3489,
+    "counts": {
+      "player": 9,
+      "goalkeeper": 1,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "456.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3504,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "457.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3517,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "458.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3534,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "460.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3547,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "461.jpg",
+    "split": "train",
+    "resolution": [
+      2560,
+      1440
+    ],
+    "player_count": 3562,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "462.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3579,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 0,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": false
+  },
+  {
+    "image_id": "463.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3591,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "464.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3606,
+    "counts": {
+      "player": 15,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "466.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 749,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "467.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3623,
+    "counts": {
+      "player": 17,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "468.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 829,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "469.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3637,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "470.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3653,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "471.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3663,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "472.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3676,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "473.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3689,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 0,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "474.jpg",
+    "split": "val",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 840,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "475.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3702,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "476.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3715,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "477.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3729,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "478.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 763,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "479.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3743,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "481.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3755,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "483.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3768,
+    "counts": {
+      "player": 13,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "485.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1012
+    ],
+    "player_count": 3778,
+    "counts": {
+      "player": 10,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "486.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 777,
+    "counts": {
+      "player": 14,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "487.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 793,
+    "counts": {
+      "player": 16,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "488.jpg",
+    "split": "train",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 3790,
+    "counts": {
+      "player": 12,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  },
+  {
+    "image_id": "489.jpg",
+    "split": "test",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "player_count": 804,
+    "counts": {
+      "player": 11,
+      "goalkeeper": 1,
+      "referee": 1,
+      "ball": 1
+    },
+    "has_ball": true,
+    "has_referee": true
+  }
+]
