@@ -276,11 +276,11 @@ def main():
 
         st.markdown("---")
         st.subheader("Team Legend")
-        st.markdown('<span class="badge-team0">TEAM 1 (White / Home)</span>', unsafe_allow_html=True)
+        st.markdown('<span class="badge-team0">TEAM 1</span>', unsafe_allow_html=True)
         st.write("")
-        st.markdown('<span class="badge-team1">TEAM 2 (Navy / Away)</span>', unsafe_allow_html=True)
+        st.markdown('<span class="badge-team1">TEAM 2</span>', unsafe_allow_html=True)
         st.write("")
-        st.caption("🟡 Yellow: Goalkeepers | 🟣 Purple: Referees | 🔴 Red: Match Ball")
+        st.caption("Goalkeepers: Yellow | Referees: Purple | Ball: Red")
 
     tab_video, tab_heatmaps, tab_analytics = st.tabs([
         "📹 Match Radar & Broadcast Stream",
@@ -383,24 +383,24 @@ def main():
             hm_col1, hm_col2 = st.columns(2)
 
             with hm_col1:
-                st.markdown("#### 🔵 Team 1 Territory Heatmap")
+                st.markdown("#### Team 1 Territory Heatmap")
                 heat_t0 = engine.generate_heatmap(
                     engine.team0_positions,
                     width=720, height=480,
                     colormap=cv2.COLORMAP_JET,
                     kernel_size=kde_smooth,
-                    title="TEAM 1 (HOME) SPATIAL DOMINANCE"
+                    title="TEAM 1 SPATIAL DOMINANCE"
                 )
                 st.image(cv2.cvtColor(heat_t0, cv2.COLOR_BGR2RGB), use_container_width=True)
 
             with hm_col2:
-                st.markdown("#### 🔴 Team 2 Territory Heatmap")
+                st.markdown("#### Team 2 Territory Heatmap")
                 heat_t1 = engine.generate_heatmap(
                     engine.team1_positions,
                     width=720, height=480,
                     colormap=cv2.COLORMAP_HOT,
                     kernel_size=kde_smooth,
-                    title="TEAM 2 (AWAY) SPATIAL DOMINANCE"
+                    title="TEAM 2 SPATIAL DOMINANCE"
                 )
                 st.image(cv2.cvtColor(heat_t1, cv2.COLOR_BGR2RGB), use_container_width=True)
 
@@ -458,11 +458,11 @@ def main():
             st.write("")
             st.markdown("### 📋 Executive Summary Table")
             summary_table = [
-                {"Tactical Metric": "Pitch Territory Control (%)", "Team 1 (Home)": f"{m['team0_control_pct']}%", "Team 2 (Away)": f"{m['team1_control_pct']}%", "Tactical Significance": "Possession & field occupancy dominance"},
-                {"Tactical Metric": "Team Center of Mass (X, Y)", "Team 1 (Home)": f"({m['team0_centroid'][0]}m, {m['team0_centroid'][1]}m)", "Team 2 (Away)": f"({m['team1_centroid'][0]}m, {m['team1_centroid'][1]}m)", "Tactical Significance": "High press vs mid-block positioning"},
-                {"Tactical Metric": "Defensive Line Height", "Team 1 (Home)": f"{m['team0_def_line_m']} m", "Team 2 (Away)": f"{m['team1_def_line_m']} m", "Tactical Significance": "Offside trap depth and backline discipline"},
-                {"Tactical Metric": "Tactical Compactness Area", "Team 1 (Home)": f"{m['team0_compactness_m2']} m²", "Team 2 (Away)": f"{m['team1_compactness_m2']} m²", "Tactical Significance": "Spatial organization and defensive structure"},
-                {"Tactical Metric": "Final-Third Penetration Rate", "Team 1 (Home)": f"{m['team0_attacking_third_pct']}%", "Team 2 (Away)": f"{m['team1_attacking_third_pct']}%", "Tactical Significance": "Offensive threat and danger creation"}
+                {"Tactical Metric": "Pitch Territory Control (%)", "Team 1": f"{m['team0_control_pct']}%", "Team 2": f"{m['team1_control_pct']}%", "Tactical Significance": "Possession & field occupancy dominance"},
+                {"Tactical Metric": "Team Center of Mass (X, Y)", "Team 1": f"({m['team0_centroid'][0]}m, {m['team0_centroid'][1]}m)", "Team 2": f"({m['team1_centroid'][0]}m, {m['team1_centroid'][1]}m)", "Tactical Significance": "High press vs mid-block positioning"},
+                {"Tactical Metric": "Defensive Line Height", "Team 1": f"{m['team0_def_line_m']} m", "Team 2": f"{m['team1_def_line_m']} m", "Tactical Significance": "Offside trap depth and backline discipline"},
+                {"Tactical Metric": "Tactical Compactness Area", "Team 1": f"{m['team0_compactness_m2']} m²", "Team 2": f"{m['team1_compactness_m2']} m²", "Tactical Significance": "Spatial organization and defensive structure"},
+                {"Tactical Metric": "Final-Third Penetration Rate", "Team 1": f"{m['team0_attacking_third_pct']}%", "Team 2": f"{m['team1_attacking_third_pct']}%", "Tactical Significance": "Offensive threat and danger creation"}
             ]
             st.table(summary_table)
 
