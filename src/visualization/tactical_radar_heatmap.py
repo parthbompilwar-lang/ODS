@@ -94,7 +94,8 @@ class TacticalRadarEngine:
         ball_pos: Optional[Tuple[float, float]] = None,
         ball_state: str = "OBSERVED",
         frame_idx: int = 0,
-        pitch_geom: Optional[Any] = None
+        pitch_geom: Optional[Any] = None,
+        **kwargs
     ):
         """
         Updates tracking accumulator with validated metric coordinates and computes
@@ -311,7 +312,8 @@ class TacticalRadarEngine:
         density_window: Optional[int] = 60,
         show_convex_hulls: bool = True,
         show_centroids: bool = True,
-        show_labels: bool = True
+        show_labels: bool = True,
+        **kwargs
     ) -> np.ndarray:
         """
         Renders complete, clean 2D metric tactical pitch radar with:
