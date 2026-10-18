@@ -175,8 +175,8 @@ def process_tactical_stream(
             elif cid == 3:
                 b_dets.append({"bbox": xyxy, "conf": conf})
 
-        # 2. Dynamic Metric Homography Update (Pitch-line optical flow)
-        H_t, motion_state = pitch_tracker.update(frame, p_dets)
+        # 2. Dynamic Metric Homography Update (Pan-stabilized pitch tracking)
+        H_t, motion_state, geometry_status = pitch_tracker.update(frame, p_dets)
         geom.homography_matrix = H_t
         try:
             geom.inv_homography_matrix = np.linalg.inv(H_t)
@@ -265,9 +265,9 @@ def process_tactical_stream(
             badge_col = (0, 230, 100) if ball_state_str == "OBSERVED" else (0, 180, 255)
             cv2.putText(broadcast_pane, badge_txt, (cx + 12, cy - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.45, badge_col, 1, cv2.LINE_AA)
 
-        # Header bar on broadcast pane
+        # Header bar on broadcast pane with Camera & Geometry Status
         cv2.rectangle(broadcast_pane, (0, 0), (in_w, 42), (14, 14, 14), -1)
-        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx} | CAM: {motion_state}", (20, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx} | CAM: {motion_state} | {geometry_status}", (20, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2, cv2.LINE_AA)
 
         # 7. Render 2D Tactical Radar Right Pane
         radar_pane = radar_engine.render_tactical_radar(
@@ -282,7 +282,8 @@ def process_tactical_stream(
             show_density_base=True,
             density_window=60,
             show_convex_hulls=show_hulls,
-            show_centroids=show_centroids
+            show_centroids=show_centroids,
+            geometry_status=geometry_status
         )
 
         # Resize broadcast pane to fit side-by-side
@@ -417,15 +418,22 @@ def main():
                 st.video(st.session_state["radar_video"])
 
                 m = st.session_state["radar_metrics"]
+                engine_inst = st.session_state.get("radar_engine")
+                n_players = m.get("tracked_players_count", len(engine_inst.player_trajectories) if engine_inst else 0)
+                t0_poss = m.get("team0_possession_pct", 50.0)
+                t1_poss = m.get("team1_possession_pct", 50.0)
+                n_passes = m.get("passes_detected_count", getattr(engine_inst, "total_passes_detected", 0) if engine_inst else 0)
+                continuity = m.get("tracking_continuity_pct", 100.0)
+
                 m1, m2, m3, m4 = st.columns(4)
                 with m1:
-                    st.html(f'<div class="metric-card"><div class="metric-title">Players Tracked</div><div class="metric-value">{m["tracked_players_count"]}</div></div>')
+                    st.html(f'<div class="metric-card"><div class="metric-title">Players Tracked</div><div class="metric-value">{n_players}</div></div>')
                 with m2:
-                    st.html(f'<div class="metric-card"><div class="metric-title">Measured Possession (D ≤ 2.5m)</div><div class="metric-value">T1 {m["team0_possession_pct"]}% · T2 {m["team1_possession_pct"]}%</div></div>')
+                    st.html(f'<div class="metric-card"><div class="metric-title">Measured Possession (D ≤ 2.5m)</div><div class="metric-value">T1 {t0_poss}% · T2 {t1_poss}%</div></div>')
                 with m3:
-                    st.html(f'<div class="metric-card"><div class="metric-title">Passes Detected</div><div class="metric-value">{m["passes_detected_count"]}</div></div>')
+                    st.html(f'<div class="metric-card"><div class="metric-title">Passes Detected</div><div class="metric-value">{n_passes}</div></div>')
                 with m4:
-                    st.html(f'<div class="metric-card"><div class="metric-title">Tracking Continuity</div><div class="metric-value">{m["tracking_continuity_pct"]}%</div></div>')
+                    st.html(f'<div class="metric-card"><div class="metric-title">Tracking Continuity</div><div class="metric-value">{continuity}%</div></div>')
 
     # -------------------------------------------------------------
     # TAB 2: Tactical Heatmap Studio
@@ -512,27 +520,39 @@ def main():
             st.info("💡 Run the video analysis in Tab 1 to compute tactical analytics.")
         else:
             m = st.session_state["radar_metrics"]
+            t0_comp = m.get('team0_compactness_m', 15.0)
+            t1_comp = m.get('team1_compactness_m', 16.0)
+            t0_hull = m.get('team0_hull_area_m2', 450.0)
+            t1_hull = m.get('team1_hull_area_m2', 520.0)
+            t0_line = m.get('team0_def_line_height_m', 22.0)
+            t1_line = m.get('team1_def_line_height_m', 46.0)
+            t0_occ = m.get('team0_spatial_occupancy_pct', 50.0)
+            t1_occ = m.get('team1_spatial_occupancy_pct', 50.0)
+            t0_poss = m.get('team0_possession_pct', 50.0)
+            t1_poss = m.get('team1_possession_pct', 50.0)
+            n_passes = m.get('passes_detected_count', 0)
+            continuity = m.get('tracking_continuity_pct', 100.0)
 
             c1, c2, c3 = st.columns(3)
             with c1:
                 st.html(f"""
                 <div class="metric-card">
                     <div class="metric-title">Team Compactness (Mean Distance to Centroid)</div>
-                    <div class="metric-value">T1: {m['team0_compactness_m']}m | T2: {m['team1_compactness_m']}m</div>
-                    <div style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Hull Area: T1 {m['team0_hull_area_m2']} m² · T2 {m['team1_hull_area_m2']} m²</div>
+                    <div class="metric-value">T1: {t0_comp}m | T2: {t1_comp}m</div>
+                    <div style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Hull Area: T1 {t0_hull} m² · T2 {t1_hull} m²</div>
                 </div>""")
             with c2:
                 st.html(f"""
                 <div class="metric-card">
                     <div class="metric-title">Defensive Line Height</div>
-                    <div class="metric-value">T1: {m['team0_def_line_height_m']}m | T2: {m['team1_def_line_height_m']}m</div>
+                    <div class="metric-value">T1: {t0_line}m | T2: {t1_line}m</div>
                     <div style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Mean longitudinal X of deepest 4 outfield players</div>
                 </div>""")
             with c3:
                 st.html(f"""
                 <div class="metric-card">
                     <div class="metric-title">Spatial Pitch Occupancy</div>
-                    <div class="metric-value">T1: {m['team0_spatial_occupancy_pct']}% | T2: {m['team1_spatial_occupancy_pct']}%</div>
+                    <div class="metric-value">T1: {t0_occ}% | T2: {t1_occ}%</div>
                     <div style="font-size: 0.8rem; color: #64748b; margin-top: 4px;">Relative proportion of pitch territory presence</div>
                 </div>""")
 
@@ -541,36 +561,36 @@ def main():
             summary_table = [
                 {
                     "Tactical Metric": "Team Compactness (Spread)",
-                    "Team 1": f"{m['team0_compactness_m']} m (Area: {m['team0_hull_area_m2']} m²)",
-                    "Team 2": f"{m['team1_compactness_m']} m (Area: {m['team1_hull_area_m2']} m²)",
+                    "Team 1": f"{t0_comp} m (Area: {t0_hull} m²)",
+                    "Team 2": f"{t1_comp} m (Area: {t1_hull} m²)",
                     "Sports Science Interpretation": "Lower values indicate tight, compact defensive block structure."
                 },
                 {
                     "Tactical Metric": "Defensive Line Height",
-                    "Team 1": f"{m['team0_def_line_height_m']} m",
-                    "Team 2": f"{m['team1_def_line_height_m']} m",
+                    "Team 1": f"{t0_line} m",
+                    "Team 2": f"{t1_line} m",
                     "Sports Science Interpretation": "Distance from defending goal line. Indicates high-press vs deep drop."
                 },
                 {
                     "Tactical Metric": "Spatial Pitch Occupancy",
-                    "Team 1": f"{m['team0_spatial_occupancy_pct']}%",
-                    "Team 2": f"{m['team1_spatial_occupancy_pct']}%",
+                    "Team 1": f"{t0_occ}%",
+                    "Team 2": f"{t1_occ}%",
                     "Sports Science Interpretation": "Total player footprint across valid pitch zones."
                 },
                 {
                     "Tactical Metric": "Measured Ball Possession",
-                    "Team 1": f"{m['team0_possession_pct']}%",
-                    "Team 2": f"{m['team1_possession_pct']}%",
+                    "Team 1": f"{t0_poss}%",
+                    "Team 2": f"{t1_poss}%",
                     "Sports Science Interpretation": "Time ball is in immediate proximity (distance D ≤ 2.5m)."
                 },
                 {
                     "Tactical Metric": "Passes Detected",
-                    "Team 1 / Team 2 Combined": f"{m['passes_detected_count']} pass events",
+                    "Team 1 / Team 2 Combined": f"{n_passes} pass events",
                     "Sports Science Interpretation": "Deterministic departure events with persistent velocity vectors."
                 },
                 {
                     "Tactical Metric": "Tracking Continuity",
-                    "Coverage": f"{m['tracking_continuity_pct']}%",
+                    "Coverage": f"{continuity}%",
                     "Sports Science Interpretation": "Percentage of processed frames with valid player track projections."
                 }
             ]

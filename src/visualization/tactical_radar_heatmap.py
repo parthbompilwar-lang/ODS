@@ -134,12 +134,21 @@ class TacticalRadarEngine:
                 foot_pt = np.array([[(bbox[0] + bbox[2]) / 2.0, float(bbox[3])]], dtype=np.float32)
                 transformed = pitch_geom.image_to_pitch(foot_pt)[0]
                 wx, wy = float(transformed[0]), float(transformed[1])
-                p["world_x"] = wx
-                p["world_y"] = wy
 
-            if wx is not None and wy is not None:
+            # Validation check: player must project onto physical pitch (with 1.5m buffer)
+            is_valid_on_pitch = (
+                wx is not None and wy is not None and
+                (-1.5 <= wx <= self.pitch_length + 1.5) and
+                (-1.5 <= wy <= self.pitch_width + 1.5)
+            )
+            p["is_on_pitch"] = is_valid_on_pitch
+
+            if is_valid_on_pitch:
+                # Clamp strictly only sub-meter boundary margins
                 wx = max(0.0, min(self.pitch_length, wx))
                 wy = max(0.0, min(self.pitch_width, wy))
+                p["world_x"] = wx
+                p["world_y"] = wy
 
                 if tid >= 0:
                     if tid not in self.player_trajectories:
@@ -157,6 +166,10 @@ class TacticalRadarEngine:
                     if dist < closest_player_dist:
                         closest_player_dist = dist
                         closest_player_team = t_id
+            else:
+                # Suppress invalid / extrapolated projections: DO NOT CLAMP TO BOUNDARY
+                p["world_x"] = None
+                p["world_y"] = None
 
         # True Measured Possession Rule: Player within 2.5m of ball has active possession
         if ball_metric is not None and closest_player_dist <= 2.5:
@@ -351,13 +364,18 @@ class TacticalRadarEngine:
                 w_pt = pitch_geom.image_to_pitch(foot)[0]
                 wx, wy = float(w_pt[0]), float(w_pt[1])
 
-            if wx is None or wy is None:
-                continue
+            if wx is not None and wy is not None:
+                # Reject out-of-bounds / extrapolated coordinates without clamping
+                if wx < -1.5 or wx > self.pitch_length + 1.5 or wy < -1.5 or wy > self.pitch_width + 1.5:
+                    continue
+                wx = max(0.0, min(self.pitch_length, wx))
+                wy = max(0.0, min(self.pitch_width, wy))
 
             rx, ry = self.world_to_pitch_px(wx, wy, width, height, margin)
             role = p.get("role", "player")
             t_id = p.get("team_id", -1)
             tid = p.get("track_id", -1)
+            is_pred = p.get("state") == "PREDICTED" or p.get("is_predicted", False)
 
             if role == "referee":
                 col = self.COLOR_REF
@@ -382,7 +400,8 @@ class TacticalRadarEngine:
                 "col": col,
                 "lbl": lbl,
                 "role": role,
-                "tid": tid
+                "tid": tid,
+                "is_pred": is_pred
             })
 
         # 3. Translucent Team Shape Convex Hulls (Soft fill, thin 1px border)
@@ -423,11 +442,17 @@ class TacticalRadarEngine:
             rx, ry = item["pt"]
             col = item["col"]
             lbl = item["lbl"]
+            is_pred = item.get("is_pred", False)
 
-            # Token: solid black outer, colored core, white border
-            cv2.circle(radar, (rx, ry), 8, (0, 0, 0), -1, cv2.LINE_AA)
-            cv2.circle(radar, (rx, ry), 6, col, -1, cv2.LINE_AA)
-            cv2.circle(radar, (rx, ry), 6, (255, 255, 255), 1, cv2.LINE_AA)
+            if is_pred:
+                # Predicted / occluded track: Hollow ring with muted core
+                cv2.circle(radar, (rx, ry), 7, (0, 0, 0), -1, cv2.LINE_AA)
+                cv2.circle(radar, (rx, ry), 6, col, 1, cv2.LINE_AA)
+            else:
+                # Confirmed Observed Track: solid black outer, colored core, white border
+                cv2.circle(radar, (rx, ry), 8, (0, 0, 0), -1, cv2.LINE_AA)
+                cv2.circle(radar, (rx, ry), 6, col, -1, cv2.LINE_AA)
+                cv2.circle(radar, (rx, ry), 6, (255, 255, 255), 1, cv2.LINE_AA)
 
             # Check for label overlap: hide number if another player is closer than 22px
             has_close_neighbor = False
@@ -473,9 +498,27 @@ class TacticalRadarEngine:
 
         cv2.putText(radar, "KDE Density", (leg_x + 180, leg_y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (140, 180, 160), 1, cv2.LINE_AA)
 
-        # Header bar
-        cv2.rectangle(radar, (0, 0), (width, 22), (12, 12, 12), -1)
-        cv2.putText(radar, "METRIC PITCH RADAR (TOP-DOWN 105m x 68m)", (margin, 15), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (200, 200, 200), 1, cv2.LINE_AA)
+        # 9. Header bar with explicit Pipeline & Geometry Status Badge
+        cv2.rectangle(radar, (0, 0), (width, 24), (12, 12, 12), -1)
+        cv2.putText(radar, "METRIC PITCH RADAR (TOP-DOWN 105m x 68m)", (margin, 16), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (200, 200, 200), 1, cv2.LINE_AA)
+
+        # Status badge determination
+        geom_stat = kwargs.get("geometry_status", "TRACKING [VALID]")
+        if current_frame < 5 or len(player_radar_items) == 0:
+            stat_lbl = "CALIBRATING"
+            stat_col = (0, 190, 245)
+        elif "UNRELIABLE" in geom_stat or "INSUFFICIENT" in geom_stat:
+            stat_lbl = "GEOMETRY UNAVAILABLE"
+            stat_col = (0, 80, 240)
+        else:
+            stat_lbl = "TRACKING [ACTIVE]"
+            stat_col = (0, 225, 100)
+
+        badge_w = len(stat_lbl) * 7 + 16
+        bx1 = width - margin - badge_w
+        cv2.rectangle(radar, (bx1, 4), (width - margin, 20), (28, 28, 28), -1)
+        cv2.rectangle(radar, (bx1, 4), (width - margin, 20), stat_col, 1)
+        cv2.putText(radar, stat_lbl, (bx1 + 8, 16), cv2.FONT_HERSHEY_SIMPLEX, 0.35, stat_col, 1, cv2.LINE_AA)
 
         return radar
 
@@ -613,6 +656,8 @@ class TacticalRadarEngine:
             "team0_centroid": (round(t0_centroid[0], 2), round(t0_centroid[1], 2)),
             "team1_centroid": (round(t1_centroid[0], 2), round(t1_centroid[1], 2)),
             "tracking_continuity_pct": round(continuity, 1),
+            "total_frames_processed": self.total_frames_processed,
+            "tracked_players_count": len(self.player_trajectories),
             "passes_detected_count": self.total_passes_detected,
             # Aliases for backward compatibility
             "team0_control_pct": round(t0_occupancy, 1),

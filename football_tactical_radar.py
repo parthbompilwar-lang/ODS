@@ -91,8 +91,8 @@ def run_pipeline(video_path: str, output_path: str):
             elif cid == 3:
                 b_dets.append({"bbox": xyxy, "conf": conf})
 
-        # 2. Dynamic Metric Homography Update
-        H_t, motion_state = pitch_tracker.update(frame, p_dets)
+        # 2. Dynamic Metric Homography Update (Pan-stabilized pitch tracking)
+        H_t, motion_state, geometry_status = pitch_tracker.update(frame, p_dets)
         geom.homography_matrix = H_t
         try:
             geom.inv_homography_matrix = np.linalg.inv(H_t)
@@ -181,7 +181,7 @@ def run_pipeline(video_path: str, output_path: str):
             cv2.putText(broadcast_pane, badge_txt, (cx + 12, cy - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.45, badge_col, 1, cv2.LINE_AA)
 
         cv2.rectangle(broadcast_pane, (0, 0), (in_w, 42), (14, 14, 14), -1)
-        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx} | CAM: {motion_state}", (20, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2, cv2.LINE_AA)
+        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx} | CAM: {motion_state} | {geometry_status}", (20, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2, cv2.LINE_AA)
 
         # 7. Render 2D Tactical Radar Right Pane
         radar_pane = radar_engine.render_tactical_radar(
@@ -196,7 +196,8 @@ def run_pipeline(video_path: str, output_path: str):
             show_density_base=True,
             density_window=60,
             show_convex_hulls=True,
-            show_centroids=True
+            show_centroids=True,
+            geometry_status=geometry_status
         )
 
         resized_broadcast = cv2.resize(broadcast_pane, (pane_w, pane_h))
