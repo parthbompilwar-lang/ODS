@@ -16,6 +16,8 @@ from src.tracking.player_tracker import PlayerTracker
 from src.tracking.ball_tracker import BallTracker
 from src.team.team_classifier import TeamClassifier
 from src.geometry.pitch_geometry import PitchGeometry
+from src.geometry.dynamic_pitch_tracker import DynamicPitchTracker
+from src.passing.pass_detector import PassDetector
 from src.visualization.tactical_radar_heatmap import TacticalRadarEngine
 
 
@@ -54,6 +56,7 @@ def run_pipeline(video_path: str, output_path: str):
     ball_tracker = BallTracker(max_missing_frames=5, initial_gating_dist=85.0)
     team_classifier = TeamClassifier(n_teams=2, vote_window=10, min_votes_required=2)
     radar_engine = TacticalRadarEngine(pitch_length=105.0, pitch_width=68.0)
+    pass_detector = PassDetector(proximity_threshold=95.0, min_departure_speed=7.0)
 
     cap = cv2.VideoCapture(video_path)
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -64,8 +67,9 @@ def run_pipeline(video_path: str, output_path: str):
     in_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     in_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     geom = get_pitch_geometry(in_w, in_h)
+    pitch_tracker = DynamicPitchTracker(geom.homography_matrix, image_shape=(in_h, in_w))
 
-    pane_w, pane_h = 640, 380
+    pane_w, pane_h = 640, 384
     writer = imageio.get_writer(output_path, fps=fps, codec='libx264', format='FFMPEG', pixelformat='yuv420p')
 
     frame_idx = 0
@@ -74,6 +78,7 @@ def run_pipeline(video_path: str, output_path: str):
         if not ret:
             break
 
+        # 1. YOLO Inference
         res = model(frame, imgsz=1280, device=device, conf=0.12, verbose=False)[0]
         p_dets = []
         b_dets = []
@@ -86,13 +91,61 @@ def run_pipeline(video_path: str, output_path: str):
             elif cid == 3:
                 b_dets.append({"bbox": xyxy, "conf": conf})
 
+        # 2. Dynamic Metric Homography Update
+        H_t, motion_state = pitch_tracker.update(frame, p_dets)
+        geom.homography_matrix = H_t
+        try:
+            geom.inv_homography_matrix = np.linalg.inv(H_t)
+        except Exception:
+            pass
+
+        # 3. Tracking & Team Classification
         p_tracks = player_tracker.update(p_dets, frame_index=frame_idx)
         b_state = ball_tracker.update(b_dets, frame_index=frame_idx)
         p_tracks = team_classifier.classify_tracks(frame, p_tracks, frame_index=frame_idx)
 
         ball_pos = b_state.get("position")
-        radar_engine.update_frame(p_tracks, ball_pos=ball_pos, pitch_geom=geom)
+        ball_state_str = b_state.get("state", "LOST")
 
+        # 4. Pass Detection
+        pass_cand = pass_detector.update(b_state, p_tracks, frame_index=frame_idx)
+        if pass_cand is not None:
+            start_px = ball_pos if ball_pos is not None else (
+                (pass_cand.passer_bbox[0] + pass_cand.passer_bbox[2]) / 2.0,
+                pass_cand.passer_bbox[3]
+            )
+            dx, dy = pass_cand.direction_vector
+            disp_px = max(20.0, pass_cand.initial_speed * 4.0)
+            end_px = (start_px[0] + dx * disp_px, start_px[1] + dy * disp_px)
+
+            p_start_w = geom.image_to_pitch(np.array([[start_px[0], start_px[1]]], dtype=np.float32))[0]
+            p_end_w = geom.image_to_pitch(np.array([[end_px[0], end_px[1]]], dtype=np.float32))[0]
+
+            passer_team = 0
+            if pass_cand.passer_track_id is not None:
+                for pt in p_tracks:
+                    if pt.get("track_id") == pass_cand.passer_track_id:
+                        passer_team = pt.get("team_id", 0)
+                        break
+
+            radar_engine.register_pass_event(
+                start_world=(float(p_start_w[0]), float(p_start_w[1])),
+                end_world=(float(p_end_w[0]), float(p_end_w[1])),
+                current_frame=frame_idx,
+                team_id=passer_team,
+                duration_frames=30
+            )
+
+        # 5. Update Tactical Radar Engine
+        radar_engine.update_frame(
+            players=p_tracks,
+            ball_pos=ball_pos,
+            ball_state=ball_state_str,
+            frame_idx=frame_idx,
+            pitch_geom=geom
+        )
+
+        # 6. Render Broadcast Left Pane
         broadcast_pane = frame.copy()
         for p in p_tracks:
             bx1, by1, bx2, by2 = map(int, p["bbox"])
@@ -120,19 +173,28 @@ def run_pipeline(video_path: str, output_path: str):
 
         if ball_pos is not None:
             cx, cy = map(int, ball_pos)
-            cv2.circle(broadcast_pane, (cx, cy), 8, (0, 0, 255), -1, cv2.LINE_AA)
-            cv2.circle(broadcast_pane, (cx, cy), 10, (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.circle(broadcast_pane, (cx, cy), 9, (0, 0, 0), -1, cv2.LINE_AA)
+            cv2.circle(broadcast_pane, (cx, cy), 7, (0, 215, 255), -1, cv2.LINE_AA)
+            cv2.circle(broadcast_pane, (cx, cy), 4, (255, 255, 255), -1, cv2.LINE_AA)
+            badge_txt = "BALL: OBS" if ball_state_str == "OBSERVED" else "BALL: PRED"
+            badge_col = (0, 230, 100) if ball_state_str == "OBSERVED" else (0, 180, 255)
+            cv2.putText(broadcast_pane, badge_txt, (cx + 12, cy - 6), cv2.FONT_HERSHEY_SIMPLEX, 0.45, badge_col, 1, cv2.LINE_AA)
 
-        cv2.rectangle(broadcast_pane, (0, 0), (in_w, 40), (15, 15, 15), -1)
-        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx}", (20, 26), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2, cv2.LINE_AA)
+        cv2.rectangle(broadcast_pane, (0, 0), (in_w, 42), (14, 14, 14), -1)
+        cv2.putText(broadcast_pane, f"MATCH BROADCAST FEED | FRAME #{frame_idx} | CAM: {motion_state}", (20, 28), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2, cv2.LINE_AA)
 
+        # 7. Render 2D Tactical Radar Right Pane
         radar_pane = radar_engine.render_tactical_radar(
             players=p_tracks,
             ball_pos=ball_pos,
+            ball_state=ball_state_str,
             pitch_geom=geom,
+            current_frame=frame_idx,
             width=pane_w,
             height=pane_h,
             margin=20,
+            show_density_base=True,
+            density_window=60,
             show_convex_hulls=True,
             show_centroids=True
         )
@@ -154,8 +216,8 @@ def run_pipeline(video_path: str, output_path: str):
 
     # Save Heatmaps
     print("Exporting Tactical Heatmaps...")
-    heat_t0 = radar_engine.generate_heatmap(radar_engine.team0_positions, title="TEAM 1 TERRITORY HEATMAP")
-    heat_t1 = radar_engine.generate_heatmap(radar_engine.team1_positions, title="TEAM 2 TERRITORY HEATMAP", colormap=cv2.COLORMAP_HOT)
+    heat_t0 = radar_engine.generate_heatmap(radar_engine.team0_history, title="TEAM 1 TERRITORY HEATMAP", colormap=cv2.COLORMAP_VIRIDIS)
+    heat_t1 = radar_engine.generate_heatmap(radar_engine.team1_history, title="TEAM 2 TERRITORY HEATMAP", colormap=cv2.COLORMAP_HOT)
     cv2.imwrite("tactical_heatmap_team0.jpg", heat_t0)
     cv2.imwrite("tactical_heatmap_team1.jpg", heat_t1)
     print("Saved tactical_heatmap_team0.jpg and tactical_heatmap_team1.jpg")
