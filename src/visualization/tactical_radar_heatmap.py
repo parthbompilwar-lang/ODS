@@ -48,6 +48,41 @@ class TacticalRadarEngine:
         self.team1_possession_frames: int = 0
         self.total_possession_frames: int = 0
 
+        # Spatial possession by pitch side (Left Half vs Right Half)
+        self.possession_left_half_frames: int = 0
+        self.possession_right_half_frames: int = 0
+
+        # Spatial possession by pitch thirds (Defensive, Middle, Attacking)
+        self.possession_def_third_frames: int = 0
+        self.possession_mid_third_frames: int = 0
+        self.possession_att_third_frames: int = 0
+
+        # Spatial possession by lateral channels (Left Flank, Center, Right Flank)
+        self.possession_left_flank_frames: int = 0
+        self.possession_center_frames: int = 0
+        self.possession_right_flank_frames: int = 0
+
+        # 3x3 Zonal possession grid counts: (row_channel, col_third)
+        # rows: 0=Left Flank, 1=Center Channel, 2=Right Flank
+        # cols: 0=Defensive 3rd, 1=Middle 3rd, 2=Attacking 3rd
+        self.zonal_possession_grid = np.zeros((3, 3), dtype=np.int32)
+
+        # Team-specific side possession breakdown
+        self.team_possession_by_side = {
+            0: {"left_half": 0, "right_half": 0, "left_flank": 0, "center": 0, "right_flank": 0, "def_third": 0, "mid_third": 0, "att_third": 0},
+            1: {"left_half": 0, "right_half": 0, "left_flank": 0, "center": 0, "right_flank": 0, "def_third": 0, "mid_third": 0, "att_third": 0}
+        }
+
+        self.current_possession_state: Dict[str, Any] = {
+            "team": -1,
+            "team_name": "CONTESTED",
+            "side": "MIDFIELD",
+            "channel": "CENTER",
+            "third": "OPEN PLAY",
+            "ball_x": 0.0,
+            "ball_y": 0.0
+        }
+
         # Pass event history: List[(start_pt, end_pt, start_frame, expiry_frame, team_id)]
         self.active_passes: List[Dict[str, Any]] = []
         self.total_passes_detected: int = 0
@@ -65,6 +100,28 @@ class TacticalRadarEngine:
         self.team0_possession_frames = 0
         self.team1_possession_frames = 0
         self.total_possession_frames = 0
+        self.possession_left_half_frames = 0
+        self.possession_right_half_frames = 0
+        self.possession_def_third_frames = 0
+        self.possession_mid_third_frames = 0
+        self.possession_att_third_frames = 0
+        self.possession_left_flank_frames = 0
+        self.possession_center_frames = 0
+        self.possession_right_flank_frames = 0
+        self.zonal_possession_grid.fill(0)
+        self.team_possession_by_side = {
+            0: {"left_half": 0, "right_half": 0, "left_flank": 0, "center": 0, "right_flank": 0, "def_third": 0, "mid_third": 0, "att_third": 0},
+            1: {"left_half": 0, "right_half": 0, "left_flank": 0, "center": 0, "right_flank": 0, "def_third": 0, "mid_third": 0, "att_third": 0}
+        }
+        self.current_possession_state = {
+            "team": -1,
+            "team_name": "CONTESTED",
+            "side": "MIDFIELD",
+            "channel": "CENTER",
+            "third": "OPEN PLAY",
+            "ball_x": 0.0,
+            "ball_y": 0.0
+        }
         self.active_passes.clear()
         self.total_passes_detected = 0
         self.total_frames_processed = 0
@@ -172,13 +229,80 @@ class TacticalRadarEngine:
                 p["world_y"] = None
 
         # True Measured Possession Rule: Player within 2.5m of ball has active possession
-        if ball_metric is not None and closest_player_dist <= 2.5:
+        if ball_metric is not None and closest_player_dist <= 2.5 and closest_player_team in [0, 1]:
+            bx, by = ball_metric
             if closest_player_team == 0:
                 self.team0_possession_frames += 1
-                self.total_possession_frames += 1
-            elif closest_player_team == 1:
+            else:
                 self.team1_possession_frames += 1
-                self.total_possession_frames += 1
+            self.total_possession_frames += 1
+
+            # 1. Longitudinal Pitch Side: Left Half (< 52.5m) vs Right Half (>= 52.5m)
+            if bx < 52.5:
+                self.possession_left_half_frames += 1
+                self.team_possession_by_side[closest_player_team]["left_half"] += 1
+                side_str = "Left Half"
+            else:
+                self.possession_right_half_frames += 1
+                self.team_possession_by_side[closest_player_team]["right_half"] += 1
+                side_str = "Right Half"
+
+            # 2. Pitch Thirds: Defensive (< 35m), Middle (35-70m), Attacking (>= 70m)
+            if bx < 35.0:
+                self.possession_def_third_frames += 1
+                self.team_possession_by_side[closest_player_team]["def_third"] += 1
+                third_str = "Defensive 3rd"
+                col_idx = 0
+            elif bx < 70.0:
+                self.possession_mid_third_frames += 1
+                self.team_possession_by_side[closest_player_team]["mid_third"] += 1
+                third_str = "Middle 3rd"
+                col_idx = 1
+            else:
+                self.possession_att_third_frames += 1
+                self.team_possession_by_side[closest_player_team]["att_third"] += 1
+                third_str = "Attacking 3rd"
+                col_idx = 2
+
+            # 3. Lateral Flank Channels: Left Flank (< 22.67m), Center (22.67-45.33m), Right Flank (>= 45.33m)
+            if by < 22.67:
+                self.possession_left_flank_frames += 1
+                self.team_possession_by_side[closest_player_team]["left_flank"] += 1
+                chan_str = "Left Flank"
+                row_idx = 0
+            elif by < 45.33:
+                self.possession_center_frames += 1
+                self.team_possession_by_side[closest_player_team]["center"] += 1
+                chan_str = "Center Channel"
+                row_idx = 1
+            else:
+                self.possession_right_flank_frames += 1
+                self.team_possession_by_side[closest_player_team]["right_flank"] += 1
+                chan_str = "Right Flank"
+                row_idx = 2
+
+            # 4. Zonal Grid Accumulation (3 rows x 3 cols)
+            self.zonal_possession_grid[row_idx, col_idx] += 1
+
+            self.current_possession_state = {
+                "team": closest_player_team,
+                "team_name": f"Team {closest_player_team + 1}",
+                "side": side_str,
+                "third": third_str,
+                "channel": chan_str,
+                "ball_x": round(bx, 1),
+                "ball_y": round(by, 1)
+            }
+        else:
+            self.current_possession_state = {
+                "team": -1,
+                "team_name": "CONTESTED",
+                "side": "MIDFIELD",
+                "third": "OPEN PLAY",
+                "channel": "CENTER",
+                "ball_x": 0.0,
+                "ball_y": 0.0
+            }
 
     def draw_pitch_diagram(
         self,
@@ -498,6 +622,16 @@ class TacticalRadarEngine:
 
         cv2.putText(radar, "KDE Density", (leg_x + 180, leg_y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (140, 180, 160), 1, cv2.LINE_AA)
 
+        # 10. Live Possession Side Indicator (Bottom Bar)
+        cur_poss = getattr(self, "current_possession_state", None)
+        if cur_poss and cur_poss.get("team") in [0, 1]:
+            poss_t = cur_poss["team"]
+            t_col = self.COLOR_TEAM0 if poss_t == 0 else self.COLOR_TEAM1
+            side_txt = f"POSS: Team {poss_t + 1} ({cur_poss.get('side', '')} · {cur_poss.get('channel', '')})"
+            cv2.putText(radar, side_txt, (leg_x + 265, leg_y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, t_col, 1, cv2.LINE_AA)
+        else:
+            cv2.putText(radar, "POSS: Contested", (leg_x + 265, leg_y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (140, 140, 140), 1, cv2.LINE_AA)
+
         # 9. Header bar with explicit Pipeline & Geometry Status Badge
         cv2.rectangle(radar, (0, 0), (width, 24), (12, 12, 12), -1)
         cv2.putText(radar, "METRIC PITCH RADAR (TOP-DOWN 105m x 68m)", (margin, 16), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (200, 200, 200), 1, cv2.LINE_AA)
@@ -642,6 +776,35 @@ class TacticalRadarEngine:
         # 6. Tracking Continuity
         continuity = (self.frames_with_players / self.total_frames_processed * 100.0) if self.total_frames_processed > 0 else 100.0
 
+        # 7. Spatial Pitch Side & Tactical Channel Possession
+        tot_poss = max(1, self.total_possession_frames)
+        poss_left_half_pct = round((self.possession_left_half_frames / tot_poss) * 100.0, 1)
+        poss_right_half_pct = round((self.possession_right_half_frames / tot_poss) * 100.0, 1)
+
+        poss_def_third_pct = round((self.possession_def_third_frames / tot_poss) * 100.0, 1)
+        poss_mid_third_pct = round((self.possession_mid_third_frames / tot_poss) * 100.0, 1)
+        poss_att_third_pct = round((self.possession_att_third_frames / tot_poss) * 100.0, 1)
+
+        poss_left_flank_pct = round((self.possession_left_flank_frames / tot_poss) * 100.0, 1)
+        poss_center_pct = round((self.possession_center_frames / tot_poss) * 100.0, 1)
+        poss_right_flank_pct = round((self.possession_right_flank_frames / tot_poss) * 100.0, 1)
+
+        # Per-team spatial side possession breakdown
+        t0_tot_poss = max(1, self.team0_possession_frames)
+        t1_tot_poss = max(1, self.team1_possession_frames)
+
+        t0_side_left = round((self.team_possession_by_side[0]["left_half"] / t0_tot_poss) * 100.0, 1)
+        t0_side_right = round((self.team_possession_by_side[0]["right_half"] / t0_tot_poss) * 100.0, 1)
+        t1_side_left = round((self.team_possession_by_side[1]["left_half"] / t1_tot_poss) * 100.0, 1)
+        t1_side_right = round((self.team_possession_by_side[1]["right_half"] / t1_tot_poss) * 100.0, 1)
+
+        t0_flank_left = round((self.team_possession_by_side[0]["left_flank"] / t0_tot_poss) * 100.0, 1)
+        t0_flank_center = round((self.team_possession_by_side[0]["center"] / t0_tot_poss) * 100.0, 1)
+        t0_flank_right = round((self.team_possession_by_side[0]["right_flank"] / t0_tot_poss) * 100.0, 1)
+        t1_flank_left = round((self.team_possession_by_side[1]["left_flank"] / t1_tot_poss) * 100.0, 1)
+        t1_flank_center = round((self.team_possession_by_side[1]["center"] / t1_tot_poss) * 100.0, 1)
+        t1_flank_right = round((self.team_possession_by_side[1]["right_flank"] / t1_tot_poss) * 100.0, 1)
+
         return {
             "team0_possession_pct": round(t0_poss, 1),
             "team1_possession_pct": round(t1_poss, 1),
@@ -659,6 +822,34 @@ class TacticalRadarEngine:
             "total_frames_processed": self.total_frames_processed,
             "tracked_players_count": len(self.player_trajectories),
             "passes_detected_count": self.total_passes_detected,
+
+            # Spatial Possession by Pitch Side (Left vs Right Half)
+            "possession_left_half_pct": poss_left_half_pct,
+            "possession_right_half_pct": poss_right_half_pct,
+
+            # Spatial Possession by Pitch Thirds
+            "possession_def_third_pct": poss_def_third_pct,
+            "possession_mid_third_pct": poss_mid_third_pct,
+            "possession_att_third_pct": poss_att_third_pct,
+
+            # Spatial Possession by Lateral Channels / Flanks
+            "possession_left_flank_pct": poss_left_flank_pct,
+            "possession_center_pct": poss_center_pct,
+            "possession_right_flank_pct": poss_right_flank_pct,
+
+            # Team-specific side breakdowns
+            "team0_left_half_pct": t0_side_left,
+            "team0_right_half_pct": t0_side_right,
+            "team1_left_half_pct": t1_side_left,
+            "team1_right_half_pct": t1_side_right,
+
+            "team0_left_flank_pct": t0_flank_left,
+            "team0_center_pct": t0_flank_center,
+            "team0_right_flank_pct": t0_flank_right,
+            "team1_left_flank_pct": t1_flank_left,
+            "team1_center_pct": t1_flank_center,
+            "team1_right_flank_pct": t1_flank_right,
+
             # Aliases for backward compatibility
             "team0_control_pct": round(t0_occupancy, 1),
             "team1_control_pct": round(t1_occupancy, 1),
@@ -669,3 +860,73 @@ class TacticalRadarEngine:
             "team0_def_line_m": round(t0_def_line, 1),
             "team1_def_line_m": round(t1_def_line, 1)
         }
+
+    def generate_zonal_possession_matrix(
+        self,
+        width: int = 800,
+        height: int = 520,
+        margin: int = 25
+    ) -> np.ndarray:
+        """
+        Renders an analytical 3x3 tactical pitch matrix showing the exact distribution
+        of ball possession across pitch sides (Left Half / Right Half) and channels (Flanks / Center).
+        """
+        canvas = self.draw_pitch_diagram(width=width, height=height, margin=margin)
+        pw = width - 2 * margin
+        ph = height - 2 * margin
+
+        tot_poss = max(1, self.total_possession_frames)
+        grid_pcts = (self.zonal_possession_grid / tot_poss) * 100.0
+
+        third_w = pw / 3.0
+        chan_h = ph / 3.0
+
+        channel_names = ["LEFT FLANK", "CENTER CHANNEL", "RIGHT FLANK"]
+        third_names = ["DEFENSIVE 3RD", "MIDDLE 3RD", "ATTACKING 3RD"]
+
+        overlay = canvas.copy()
+
+        for r in range(3):
+            for c in range(3):
+                zx1 = int(margin + c * third_w)
+                zy1 = int(margin + r * chan_h)
+                zx2 = int(margin + (c + 1) * third_w)
+                zy2 = int(margin + (r + 1) * chan_h)
+
+                pct = float(grid_pcts[r, c])
+                intensity = min(1.0, pct / 25.0)
+
+                # Tint color (Muted Gold for higher possession density)
+                tint_bgr = (int(30 + intensity * 60), int(140 + intensity * 70), int(220 + intensity * 35))
+                cv2.rectangle(overlay, (zx1 + 2, zy1 + 2), (zx2 - 2, zy2 - 2), tint_bgr, -1)
+                cv2.rectangle(canvas, (zx1, zy1), (zx2, zy2), (70, 90, 70), 1, cv2.LINE_AA)
+
+        cv2.addWeighted(overlay, 0.35, canvas, 0.65, 0, canvas)
+
+        # Draw Labels & Percentages
+        for r in range(3):
+            for c in range(3):
+                zx1 = int(margin + c * third_w)
+                zy1 = int(margin + r * chan_h)
+                zx2 = int(margin + (c + 1) * third_w)
+                zy2 = int(margin + (r + 1) * chan_h)
+
+                cx = int((zx1 + zx2) / 2)
+                cy = int((zy1 + zy2) / 2)
+
+                pct = float(grid_pcts[r, c])
+                zone_title = f"{channel_names[r]} · {third_names[c]}"
+                pct_str = f"{pct:.1f}%"
+
+                # Text shadow
+                cv2.putText(canvas, zone_title, (cx - 75, cy - 8), cv2.FONT_HERSHEY_SIMPLEX, 0.33, (0, 0, 0), 2, cv2.LINE_AA)
+                cv2.putText(canvas, zone_title, (cx - 75, cy - 8), cv2.FONT_HERSHEY_SIMPLEX, 0.33, (220, 220, 220), 1, cv2.LINE_AA)
+
+                cv2.putText(canvas, pct_str, (cx - 28, cy + 18), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 0, 0), 3, cv2.LINE_AA)
+                cv2.putText(canvas, pct_str, (cx - 28, cy + 18), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (255, 255, 255), 2, cv2.LINE_AA)
+
+        # Header
+        cv2.rectangle(canvas, (0, 0), (width, 24), (12, 12, 12), -1)
+        cv2.putText(canvas, "SPATIAL POSSESSION BY PITCH SIDE & CHANNEL (3x3 TACTICAL MATRIX)", (margin, 16), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (200, 200, 200), 1, cv2.LINE_AA)
+
+        return canvas

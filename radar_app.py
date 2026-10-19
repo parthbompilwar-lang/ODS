@@ -435,6 +435,83 @@ def main():
                 with m4:
                     st.html(f'<div class="metric-card"><div class="metric-title">Tracking Continuity</div><div class="metric-value">{continuity}%</div></div>')
 
+                st.markdown("---")
+                st.subheader("🧭 Spatial Possession Breakdown: By Pitch Side & Channels")
+                st.caption("Quantitative distribution of measured ball control across pitch halves (Left vs Right), attacking thirds, and lateral wing flanks.")
+
+                side_tab1, side_tab2, side_tab3 = st.tabs([
+                    "Pitch Halves (Left vs Right)",
+                    "Pitch Thirds (Defensive · Middle · Attacking)",
+                    "Wing Channels (Left Flank · Center · Right Flank)"
+                ])
+
+                with side_tab1:
+                    s_col1, s_col2 = st.columns(2)
+                    p_left = m.get("possession_left_half_pct", 50.0)
+                    p_right = m.get("possession_right_half_pct", 50.0)
+                    with s_col1:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Left Half Possession (X < 52.5m)</div>
+                            <div class="metric-value">{p_left}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">Team 1: {m.get("team0_left_half_pct", 50.0)}% · Team 2: {m.get("team1_left_half_pct", 50.0)}%</div>
+                        </div>''')
+                    with s_col2:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Right Half Possession (X ≥ 52.5m)</div>
+                            <div class="metric-value">{p_right}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">Team 1: {m.get("team0_right_half_pct", 50.0)}% · Team 2: {m.get("team1_right_half_pct", 50.0)}%</div>
+                        </div>''')
+
+                with side_tab2:
+                    t_col1, t_col2, t_col3 = st.columns(3)
+                    with t_col1:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Defensive 3rd (X < 35m)</div>
+                            <div class="metric-value">{m.get("possession_def_third_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">Deep build-up & defensive pressure</div>
+                        </div>''')
+                    with t_col2:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Middle 3rd (35m ≤ X < 70m)</div>
+                            <div class="metric-value">{m.get("possession_mid_third_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">Midfield transition & retention</div>
+                        </div>''')
+                    with t_col3:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Attacking 3rd (X ≥ 70m)</div>
+                            <div class="metric-value">{m.get("possession_att_third_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">Danger zone penetration & chances</div>
+                        </div>''')
+
+                with side_tab3:
+                    f_col1, f_col2, f_col3 = st.columns(3)
+                    with f_col1:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Left Flank (Y < 22.7m)</div>
+                            <div class="metric-value">{m.get("possession_left_flank_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">T1: {m.get("team0_left_flank_pct", 33.3)}% · T2: {m.get("team1_left_flank_pct", 33.3)}%</div>
+                        </div>''')
+                    with f_col2:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Central Channel (22.7m ≤ Y < 45.3m)</div>
+                            <div class="metric-value">{m.get("possession_center_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">T1: {m.get("team0_center_pct", 33.3)}% · T2: {m.get("team1_center_pct", 33.3)}%</div>
+                        </div>''')
+                    with f_col3:
+                        st.html(f'''
+                        <div class="metric-card">
+                            <div class="metric-title">Right Flank (Y ≥ 45.3m)</div>
+                            <div class="metric-value">{m.get("possession_right_flank_pct", 33.3)}%</div>
+                            <div style="font-size:0.82rem; color:#64748b; margin-top:4px;">T1: {m.get("team0_right_flank_pct", 33.3)}% · T2: {m.get("team1_right_flank_pct", 33.3)}%</div>
+                        </div>''')
+
     # -------------------------------------------------------------
     # TAB 2: Tactical Heatmap Studio
     # -------------------------------------------------------------
@@ -508,6 +585,12 @@ def main():
                 )
                 st.image(cv2.cvtColor(heat_p, cv2.COLOR_BGR2RGB), use_container_width=True)
                 st.caption(f"Total positions tracked for Player #{pick_track}: {len(player_pts)} frames")
+
+            st.markdown("---")
+            st.markdown("#### 🗺️ Zonal Pitch Possession Matrix (3x3 Grid by Pitch Side & Channel)")
+            st.caption("Analytical matrix displaying the exact percentage of match ball possession across Left Flank, Center Channel, Right Flank and Defensive, Middle, Attacking Thirds.")
+            zonal_mat = engine.generate_zonal_possession_matrix(width=800, height=520)
+            st.image(cv2.cvtColor(zonal_mat, cv2.COLOR_BGR2RGB), use_container_width=True)
 
     # -------------------------------------------------------------
     # TAB 3: Sports Science Analytics
